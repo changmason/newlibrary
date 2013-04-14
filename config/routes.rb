@@ -1,4 +1,7 @@
 Newlibrary::Application.routes.draw do
+
+  get 'books/:id' => 'books#show'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
