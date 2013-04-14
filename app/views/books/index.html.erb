@@ -16,14 +16,14 @@ Book List
 
   <% @books.each do |book| %>
     <tr>
-      <th><%= book.id %></th>
-      <th><%= book.category.try(:name) %></th>
-      <th><%= book.author %></th>
-      <th><%= book.title %></th>
-      <th><%= book.description %></th>
-      <th><%= book.publish_date %></th>
-      <th><%= link_to 'Edit', "/books/#{book.id}/edit" %></th>
-      <th><%= link_to 'Delete', "/books/#{book.id}", :method => 'delete' %></th>
+      <td><%= book.id %></td>
+      <td><%= book.category.try(:name) %></td>
+      <td><%= book.author %></td>
+      <td><%= book.title %></td>
+      <td><%= book.description %></td>
+      <td><%= book.publish_date %></td>
+      <td><%= link_to 'Edit', "/books/#{book.id}/edit" %></td>
+      <td><%= link_to 'Delete', "/books/#{book.id}", :method => 'delete' %></td>
     </tr>
   <% end %>
 
