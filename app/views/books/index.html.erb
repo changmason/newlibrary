@@ -10,6 +10,7 @@ Book List
     <th>Description</th>
     <th>Publish date</th>
     <th></th>
+    <th></th>
   </tr>
 
   <% @books.each do |book| %>
@@ -20,6 +21,7 @@ Book List
       <th><%= book.description %></th>
       <th><%= book.publish_date %></th>
       <th><%= link_to 'Edit', "/books/#{book.id}/edit" %></th>
+      <th><%= link_to 'Delete', "/books/#{book.id}", :method => 'delete' %></th>
     </tr>
   <% end %>
 
