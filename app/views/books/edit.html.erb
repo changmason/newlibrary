@@ -4,6 +4,10 @@ Edit Book
 
 <%= form_for @book, :url => "/books/#{@book.id}" do |f| %>
 
+  <%= f.label :category_id %>
+  <%= f.collection_select :category_id, @categories, :id, :name %>
+  <br/>
+
   <%= f.label :author %>
   <%= f.text_field :author %>
   <br/>
