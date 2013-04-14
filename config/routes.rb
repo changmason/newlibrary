@@ -1,6 +1,9 @@
 Newlibrary::Application.routes.draw do
 
+  post 'books/'   => 'books#create'
+  get 'books/new' => 'books#new'
   get 'books/:id' => 'books#show'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
